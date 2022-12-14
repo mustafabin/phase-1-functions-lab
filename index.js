@@ -28,4 +28,21 @@ function distanceTravelledInFeet(start, destination) {
     return difference * ft
     //returns the number of feet traveled
 }
-console.log(distanceTravelledInFeet(1,5))
+
+
+
+function calculatesFarePrice(start, destination) {
+
+    // find the difference in feet
+    let difference = distanceTravelledInFeet(start,destination)
+
+    if( difference > 2500){
+        return 'cannot travel that far'
+    }else if(difference < 400){
+        return 'This is Free'
+    }
+    return difference * 2
+    
+
+  }
+console.log(calculatesFarePrice(1,5))
